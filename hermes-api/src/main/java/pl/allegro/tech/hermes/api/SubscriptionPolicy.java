@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import pl.allegro.tech.hermes.api.helpers.Patch;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.util.Objects;
 
@@ -15,6 +16,7 @@ public class SubscriptionPolicy {
     private Integer rate;
 
     @Min(0)
+    @Max(7200)
     private Integer messageTtl;
 
     @Min(0)
