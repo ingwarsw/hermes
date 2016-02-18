@@ -88,7 +88,7 @@ public class PublishingAvroTest extends IntegrationTest {
         });
     }
 
-    @Test
+    @Test(enabled = false)
     public void shouldSendAvroAfterSubscriptionContentTypeChanged() throws Exception {
         // given
         Topic topic = operations.buildTopic(topic()
