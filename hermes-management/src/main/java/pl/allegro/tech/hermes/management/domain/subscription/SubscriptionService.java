@@ -128,7 +128,8 @@ public class SubscriptionService {
 
     private boolean isConsumerRestartNeeded(Subscription retrieved, Subscription subscription) {
         return !retrieved.getEndpoint().equals(subscription.getEndpoint()) ||
-               !retrieved.getContentType().equals(subscription.getContentType());
+               !retrieved.getContentType().equals(subscription.getContentType()) ||
+               !retrieved.getDeliveryType().equals(subscription.getDeliveryType());
     }
 
     public List<Subscription> querySubscription(Query<Subscription> query) {
